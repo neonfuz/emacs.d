@@ -1,0 +1,3 @@
+[submodule "fork/ibuffer-sidebar"]
+	path = fork/ibuffer-sidebar
+	url = https://github.com/jojojames/ibuffer-sidebar

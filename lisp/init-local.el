@@ -2,6 +2,31 @@
 ;;; Commentary:
 ;;; Code:
 
+;; Sidebar
+;;-----
+
+(require-package 'use-package)
+
+(use-package
+  dired-sidebar
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar))
+
+(use-package
+  ibuffer-sidebar
+  :load-path "~/.emacs.d/fork/ibuffer-sidebar"
+  :ensure nil
+  :commands (ibuffer-sidebar-toggle-sidebar)
+  :config
+  (setq ibuffer-sidebar-use-custom-font t)
+  (setq ibuffer-sidebar-face `(:family "Helvetica" :height 140)))
+
+(defun sidebar-toggle ()
+  "Toggle both `dired-sidebar' and `ibuffer-sidebar'."
+  (interactive)
+  (dired-sidebar-toggle-sidebar)
+  (ibuffer-sidebar-toggle-sidebar))
+
 ;; Graphql support
 ;;-----
 (require-package 'graphql-mode)
