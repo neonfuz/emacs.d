@@ -2,6 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
+;; Graphql support
+;;-----
+(require-package 'graphql-mode)
+(add-to-list 'auto-mode-alist '("\\.graphql\\'" . graphql-mode))
+
 ;; JSX support
 ;;-----
 (require-package 'rjsx-mode)
