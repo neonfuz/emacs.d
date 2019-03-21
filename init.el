@@ -137,16 +137,19 @@
 (require-package 'gnuplot)
 (require-package 'lua-mode)
 (require-package 'htmlize)
-(require-package 'dsvn)
+;;(require-package 'dsvn)
 (when *is-a-mac*
   (require-package 'osx-location))
 (unless (eq system-type 'windows-nt)
   (maybe-require-package 'daemons))
 (maybe-require-package 'dotenv-mode)
 
-(when (maybe-require-package 'uptimes)
-  (setq-default uptimes-keep-count 200)
-  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
+;; --------
+;; BROKEN
+;; --------
+;;(when (maybe-require-package 'uptimes)
+;;  (setq-default uptimes-keep-count 200)
+;;  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
 
 
 ;;----------------------------------------------------------------------------
