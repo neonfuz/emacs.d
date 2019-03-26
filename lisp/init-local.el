@@ -26,6 +26,15 @@
   (dired-sidebar-toggle-sidebar)
   (ibuffer-sidebar-toggle-sidebar))
 
+;; Auto-Yasnippet
+;;-----
+(use-package
+  auto-yasnippet
+  :ensure t
+  :commands (aya-create aya-expand)
+  :bind (("M-s c" . aya-create)
+         ("M-s e" . aya-expand)))
+
 ;; Graphql support
 ;;-----
 (require-package 'graphql-mode)
