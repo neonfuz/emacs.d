@@ -34,7 +34,7 @@
 ;; JSX support
 ;;-----
 (require-package 'rjsx-mode)
-(add-to-list 'auto-mode-alist '("\\.\\(js\\|es6\\|jsx\\)\\(\\.erb\\)?\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(j\\|t\\)sx?\\'" . rjsx-mode))
 
 ;; Typescript IDE support
 ;;-----
