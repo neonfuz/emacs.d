@@ -7,6 +7,8 @@
 
 (require-package 'use-package)
 
+;; Sidebar
+;;-----
 (use-package
   dired-sidebar
   :ensure t
@@ -16,10 +18,7 @@
   ibuffer-sidebar
   :load-path "~/.emacs.d/fork/ibuffer-sidebar"
   :ensure nil
-  :commands (ibuffer-sidebar-toggle-sidebar)
-  :config
-  (setq ibuffer-sidebar-use-custom-font t)
-  (setq ibuffer-sidebar-face `(:family "Helvetica" :height 140)))
+  :commands (ibuffer-sidebar-toggle-sidebar))
 
 (defun sidebar-toggle ()
   "Toggle both `dired-sidebar' and `ibuffer-sidebar'."
